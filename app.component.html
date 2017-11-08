@@ -1,0 +1,27 @@
+
+<div>
+<agm-map [zoom] = "10" [latitude]="latestlat" [longitude]="latestlng">
+
+  <agm-polyline geodesic="true" [strokeColor]="'red'">
+
+    <ng-container *ngFor = "let m of markers">
+      <agm-marker [latitude]="startlat" [longitude]="startlng"> </agm-marker>
+      <agm-marker [latitude]="latestlat" [longitude]="latestlng"> </agm-marker>
+      <agm-polyline-point [latitude]="m.lat" [longitude]="m.lng"> </agm-polyline-point>
+    </ng-container>
+    
+
+  </agm-polyline>
+ 
+</agm-map>
+</div>
+
+<div>
+  Lattitude : {{lat}} 
+  <br> Longitude : {{lng}}
+</div>
+
+<div>
+  <input type="text" name="insert_lat" ng-model = "coordinates.insert_lat"> <br>
+  <input type="text" name="insert_lng" ng-model = "coordinates.insert_lng">
+</div>
