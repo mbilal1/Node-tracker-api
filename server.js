@@ -16,7 +16,7 @@ app.get ('/', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify("HELLO FROM SERVER"));
 });
-
+/*
 var lat = 33.5500, lng = 73.5231;
 
 app.get ('/getCoordinates', function (req, res) {
@@ -51,6 +51,7 @@ conn.connect(function(err){
   }
   console.log('Connection established');
 });
+*/
 
 app.listen (3000, function () {
     console.log("Server Started at port 3000");
