@@ -53,8 +53,6 @@ conn.connect(function(err){
 });
 */
 
-var port_number = server.listen(process.env.PORT || 3001);
-app.listen(port_number);
-app.listen (port_number, function () {
-    console.log("Server Started at port ", port_number);
+app.listen (process.env.PORT || 3001, function () {
+    console.log("Server Started at port ", 3001);
 });
